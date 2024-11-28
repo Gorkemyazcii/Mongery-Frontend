@@ -28,9 +28,9 @@ function ProfitTable() {
            </tr>
          </thead>
          <tbody>
-           {data.orders.map((row, index) => (
+           {data.map((row, index) => (
             <tr key={index}>
-              <td>{JSON.parse(row.customer).companyname}</td>
+              <td>{JSON.parse(row.products).reduce.companyname}</td>
               <td>{row.invoice_number}</td>
               <td>{row.products[0].quantity} ton</td>
               <td>{(row.subtotal * row.primary_rate).toFixed(2)} USD</td>
