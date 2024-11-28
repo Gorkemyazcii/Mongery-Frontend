@@ -1,14 +1,12 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Header from "./components/Header";
 import FilterDropdown from "./components/FilterDropdown";
 import ProfitTable from "./components/ProfitTable";
 import data from "./orders.json";
-// JSON dosyanız buraya eklenecek.
 
 function App() {
   const [filter, setFilter] = useState("order");
 
-  // Örnek veri işleme mantığı:
   const processedData = data.orders.map((order) => ({
     customer: order.customer,
     invoice: order.invoice_number,
